@@ -1,6 +1,6 @@
 FROM jenkins/jenkins:lts
-
-RUN apt update && apt upgrade && apt install -y \
+USER root
+RUN apt update && apt upgrade -y && apt install -y \
     ninja-build \
     g++ \
     libxml2-dev
